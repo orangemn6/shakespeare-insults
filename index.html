@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Insulter</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+
+   
+    
+    <!-- Custom CSS -->
+    <style>
+    .row{
+        font-family: 'Abril Fatface', cursive;
+    }
+    body {
+        height: 700px;
+   
+
+        background-color: #ffffff;
+
+        color:black;
+        background: orange; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(white, gainsboro); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(white, gainsboro); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(white, gainsboro); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(white,  gainsboro); /* Standard syntax (must be */
+        background-size:contain;
+        
+        
+        
+        background-color: gainsboro;
+
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    .jumbotron{
+
+        background-color: #ccffcc;  
+
+        background-color: ghostwhite;   
+
+    }
+    h1 {
+        font-family: 'Lato', sans-serif;
+    }
+    </style>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+   
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Shakespeare's Insults generator</h1>
+            </div>
+            
+        </div>
+        <div class="jumbotron">
+          <h1>Thou art a</h1>
+          <h2 id="insultHere">...</h2>
+
+          <h1 id="insultHere">...</h1>
+          <a href="#" onClick="insult()" class="btn btn-primary btn-lg">Insult Me!</a>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <!-- concatination code -->
+    <script>
+        var column1 = [
+            "artless",
+            "bawdy",
+            "beslubbering",
+            "bootless",
+            "churlish",
+            "cockered",
+            "clouted",
+            "craven",
+            "currish",
+            "dankish",
+            "dissembling",
+            "droning",
+            "errant",
+            "fawning",
+            "fobbing",
+            "froward",
+            "frothy",
+            "gleeking",
+            "goatish",
+            "gorbellied",
+            "impertinent",
+            "infectious",
+            "jarring",
+            "loggerheaded",
+            "lumpish",
+            "mammering",
+            "mangled",
+            "mewling",
+            "paunchy",
+            "pribbling",
+            "puking",
+            "puny",
+            "qualling",
+            "rank",
+            "reeky",
+            "roguish",
+            "ruttish",
+            "saucy",
+            "spleeny",
+            "spongy",
+            "surly",
+            "tottering",
+            "unmuzzled",
+            "vain",
+            "venomed",
+            "villainous",
+            "warped",
+            "wayward",
+            "weedy",
+            "yeasty"
+        ];
+        var column2 = [
+            "base-court",
+            "bat-fowling",
+            "beef-witted",
+            "beetle-headed",
+            "boil-brained",
+            "clapper-clawed",
+            "clay-brained",
+            "common-kissing",
+            "crook-pated",
+            "dismal-dreaming",
+            "dizzy-eyed",
+            "doghearted",
+            "dread-bolted",
+            "earth-vexing",
+            "elf-skinned",
+            "fat-kidneyed",
+            "fen-sucked",
+            "flap-mouthed",
+            "fly-bitten",
+            "folley-fallen",
+            "fool-born",
+            "full-gorged",
+            "guts-griping",
+            "half-faced",
+            "hasty-witted",
+            "hedge-born",
+            "hell-hated",
+            "idle-headed",
+            "ill-breeding",
+            "ill-nurtured",
+            "knotty-pated",
+            "milk-livered",
+            "motley-minded",
+            "onion-eyed",
+            "plum-plucked",
+            "pottle-deep",
+            "pox-marked",
+            "reeling-ripe",
+            "rough-hewn",
+            "rude-growing",
+            "rump-fed",
+            "shard-borne",
+            "sheep-biting",
+            "spur-galled",
+            "swag-bellied",
+            "tardy-gaited",
+            "tickle-brained",
+            "toad-spotted",
+            "unchin-snouted",
+            "weather-bitten",
+        ];
+        var column3 = [
+            "apple-john",
+            "baggage",
+            "barnacle",
+            "bladder",
+            "boar-pig",
+            "bugbear",
+            "bum-bailey",
+            "canker-blossom",
+            "clack-dish",
+            "clotpole",
+            "coxcomb",
+            "codpiece",
+            "death-token",
+            "dewberry",
+            "flap-dragon",
+            "flax-wench",
+            "flirt-gill",
+            "foot-licker",
+            "fustilarian",
+            "giglet",
+            "gudgeon",
+            "haggard",
+            "harpy",
+            "hedge-pig",
+            "horn-beast",
+            "hugger-mugger",
+            "joithead",
+            "lewdster",
+            "lout",
+            "maggot-pie",
+            "malt-worm",
+            "mammet",
+            "measle",
+            "minnow",
+            "miscreant",
+            "moldwarp",
+            "mumble-news",
+            "nut-hook",
+            "pigeon-egg",
+            "pignut",
+            "puttock",
+            "pumpion",
+            "ratsbane",
+            "scut",
+            "skainsmate",
+            "strumpet",
+            "varlot",
+            "vassal",
+            "whey-face",
+            "wagtail",
+            "Pablo Parodi",
+            "dunceboy"
+        ];
+        function insult()
+        {
+            var insultString = column1[Math.floor((Math.random() * 49) + 0)].concat("  ",column2[Math.floor((Math.random() * 49) + 0)],"  ",column3[Math.floor((Math.random() * 49) + 0)]);
+            document.getElementById("insultHere").innerHTML =insultString;
+        }
+        
+    </script>
+
+    <!-- jQuery CDN -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- jQuery local fallback -->
+    <script>window.jQuery || document.write('<script src="/local/jquery.min.js"><\/script>')</script>
+    <!-- Bootstrap JS CDN -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS local fallback -->
+    <script>if(typeof($.fn.modal) === 'undefined') {document.write('<script src="/local/bootstrap.min.js"><\/script>')}</script>
+    <!-- Bootstrap CSS local fallback -->
+    <script>
+    $(document).ready(function() {
+    var bodyColor = $('body').css('color');
+    if(bodyColor != 'rgb(51, 51, 51)') {
+    $("head").prepend('<link rel="stylesheet" href="/local/bootstrap.min.css">');}});
+    </script>
+</body>
+
+</html>
